@@ -3,6 +3,6 @@ module rakin.law_firm_oop {
     requires javafx.fxml;
 
 
-    opens rakin.law_firm_oop to javafx.fxml;
-    exports rakin.law_firm_oop;
+    opens rakin to javafx.fxml;
+    exports rakin;
 }

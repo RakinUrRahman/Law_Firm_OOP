@@ -1,4 +1,4 @@
-package rakin.law_firm_oop;
+package rakin;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,4 +1,4 @@
-package rakin.law_firm_oop;
+package rakin;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
