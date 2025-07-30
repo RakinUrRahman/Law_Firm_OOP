@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakin.LawyerDashboardController">
+
+    <!-- Top Header -->
+    <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #2c3e50;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <padding>
+            <Insets left="20" />
+        </padding>
+        <children>
+            <Label style="-fx-text-fill: white;" text="Welcome, Lawyer">
+                <font>
+                    <Font name="Segoe UI Bold" size="22" />
+                </font>
+            </Label>
+        </children>
+    </HBox>
+
+    <!-- Left Navigation -->
+    <VBox prefWidth="180" spacing="12" style="-fx-background-color: #34495e;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
+        <padding>
+            <Insets bottom="15" left="10" right="10" top="25" />
+        </padding>
+        <children>
+            <Button onAction="#lawyerDashboardButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Dashboard" />
+            <Button onAction="#lawyerMyCasesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="My Cases" />
+            <Button onAction="#lawyerDraftDocumentsButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Draft Documents" />
+            <Button onAction="#LawyerClientMessagesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Messages" />
+            <Button onAction="#LawyerJoinHearingButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Join Hearing" />
+            <Button onAction="#LawyerSubmitReportButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Submit Report" />
+            <Button onAction="#lawyerAskExpertButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Ask Expert" />
+            <Button onAction="#lawyerCloseCaseButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Close Case" />
+            <Separator prefWidth="160" />
+            <Button onAction="#lawyerLogoutButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Logout" />
+        </children>
+    </VBox>
+
+    <!-- Main Content Area -->
+    <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
+
+        <!-- Welcome Message -->
+        <Label layoutX="20" layoutY="20" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Welcome back, John Doe!" />
+
+        <!-- Stats bar -->
+        <HBox layoutX="20" layoutY="60" spacing="20">
+
+            <VBox alignment="CENTER" prefWidth="180" spacing="8" style="-fx-background-color: #3498db; -fx-background-radius: 8; -fx-padding: 20;">
+                <Label fx:id="lawyerVTotalCasesLabel" style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" text="32" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Total Cases" />
+            </VBox>
+
+            <VBox alignment="CENTER" prefWidth="180" spacing="8" style="-fx-background-color: #e67e22; -fx-background-radius: 8; -fx-padding: 20;">
+                <Label fx:id="lawyerVPendingTasksLabel" style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" text="7" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Pending Tasks" />
+            </VBox>
+
+            <VBox alignment="CENTER" prefWidth="180" spacing="8" style="-fx-background-color: #2ecc71; -fx-background-radius: 8; -fx-padding: 20;">
+                <Label fx:id="lawyerVUpcomingHearingsLabel" style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" text="4" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Upcoming Hearings" />
+            </VBox>
+
+        </HBox>
+
+        <!-- Info Panels -->
+        <VBox layoutX="20" layoutY="180" prefWidth="600" spacing="20">
+
+            <!-- Today's Schedule -->
+            <VBox prefHeight="77.0" prefWidth="573.0" spacing="10" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 15;">
+                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #2c3e50;" text="Today's Schedule" />
+                <Label fx:id="lawyerTodaysScheduleLabel" prefHeight="64.0" prefWidth="224.0" text="." />
+            </VBox>
+
+            <!-- Recent Case Updates -->
+            <VBox prefHeight="65.0" prefWidth="597.0" spacing="10" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 15;">
+                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #2c3e50;" text="Recent Case Updates" />
+                <Label fx:id="lawyerRecentCaseUpdatesLabel" prefHeight="69.0" prefWidth="237.0" text="." />
+            </VBox>
+
+            <!-- Pending Tasks -->
+            <VBox spacing="10" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 15;">
+                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #2c3e50;" text="Pending Tasks" />
+                <Label fx:id="lawyerPendingTasksLabel" prefHeight="27.0" prefWidth="175.0" text="." />
+            </VBox>
+
+        </VBox>
+
+    </AnchorPane>
+
+</AnchorPane>
