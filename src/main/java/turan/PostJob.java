@@ -29,4 +29,8 @@ public class PostJob
     @javafx.fxml.FXML
     public void postjobhandle(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backbuttonhandle(ActionEvent actionEvent) {
+    }
 }
