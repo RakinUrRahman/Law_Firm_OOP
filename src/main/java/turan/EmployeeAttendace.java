@@ -41,4 +41,16 @@ public class EmployeeAttendace
     @javafx.fxml.FXML
     public void attendancebuttonhandle(ActionEvent actionEvent) {
     }
+
+    @Deprecated
+    public void rejectbuttonhandle(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void sendnotificationbuttonhandle(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void approvebuttonhandle(ActionEvent actionEvent) {
+    }
 }
