@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="278.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="turan.LoginCasemanager">
+<AnchorPane prefHeight="400.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="turan.LoginCasemanager">
    <children>
       <Label layoutX="32.0" layoutY="87.0" text="Select Role" />
       <ComboBox fx:id="selectrolecb" layoutX="105.0" layoutY="83.0" prefWidth="150.0" />
