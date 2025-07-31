@@ -21,10 +21,10 @@
       </TableView>
       <Label layoutX="51.0" layoutY="76.0" text="Filter by Role" />
       <ComboBox fx:id="filterrolecb" layoutX="133.0" layoutY="72.0" prefWidth="150.0" />
-      <Label fx:id="errormsglabel" layoutX="133.0" layoutY="175.0" text="Error if invalid...................." />
-      <Button layoutX="34.0" layoutY="40.0" mnemonicParsing="false" onAction="#backbuttonhandle" text="Back" />
-      <Button layoutX="133.0" layoutY="139.0" mnemonicParsing="false" onAction="#refreshbuttonhandle" text=" Refresh and Add" />
       <Label layoutX="46.0" layoutY="107.0" text="Filter by Status" />
       <ComboBox fx:id="filterstatuscb1" layoutX="133.0" layoutY="103.0" prefWidth="150.0" />
+      <Label fx:id="errormsglabel" layoutX="143.0" layoutY="185.0" text="Error if invalid...................." />
+      <Button layoutX="31.0" layoutY="38.0" mnemonicParsing="false" onAction="#backbuttonhandle" text="Back" />
+      <Button layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#refreshbuttonhandle" text=" Refresh and Add" />
    </children>
 </AnchorPane>
