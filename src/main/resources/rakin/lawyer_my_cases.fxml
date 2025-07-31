@@ -4,6 +4,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -44,38 +47,28 @@
         </children>
     </VBox>
 
-    <!-- Main Content Area -->
-    <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
+    <!-- Main Content Area (My Cases Section) -->
+    <AnchorPane fx:id="mainContentPane" style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
 
-        <!-- Welcome Message -->
-        <Label layoutX="20" layoutY="20" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Welcome back, John Doe!" />
+        <!-- Header -->
+        <Label layoutX="20" layoutY="20" style="-fx-text-fill: #2c3e50;" text="My Assigned Cases">
+            <font>
+                <Font name="Segoe UI Semibold" size="20" />
+            </font>
+        </Label>
 
-        <!-- Stats bar -->
-        <HBox layoutX="20" layoutY="60" spacing="20" />
+        <!-- Search Field -->
+        <TextField fx:id="lawyerSearchCaseIdTF" layoutX="20" layoutY="60" prefWidth="300" promptText="Search by case title or ID" />
 
-        <!-- Info Panels -->
-        <VBox layoutX="20" layoutY="180" prefWidth="600" spacing="20">
-   
-            <!-- Today's Schedule -->
-            <VBox prefHeight="77.0" prefWidth="600.0" spacing="10" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 15;">
-                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #2c3e50;" text="Today's Schedule" />
-                <Label fx:id="lawyerTodaysScheduleLabel" prefHeight="64.0" prefWidth="224.0" text="." />
-            </VBox>
-
-            <!-- Recent Case Updates -->
-            <VBox prefHeight="65.0" prefWidth="597.0" spacing="10" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 15;">
-                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #2c3e50;" text="Recent Case Updates" />
-                <Label fx:id="lawyerRecentCaseUpdatesLabel" prefHeight="69.0" prefWidth="237.0" text="." />
-            </VBox>
-
-            <!-- Pending Tasks -->
-            <VBox spacing="10" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 15;">
-                <Label style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #2c3e50;" text="Pending Tasks" />
-                <Label fx:id="lawyerPendingTasksLabel" prefHeight="27.0" prefWidth="175.0" text="." />
-            </VBox>
-
-        </VBox>
+        <!-- TableView -->
+        <TableView fx:id="lawyerMyCasesTV" layoutX="20" layoutY="100" prefHeight="420" prefWidth="680">
+            <columns>
+                <TableColumn fx:id="lawyerMyCasesCaseIdCol" prefWidth="100" text="Case ID" />
+                <TableColumn fx:id="lawyerMyCasesTitleCol" prefWidth="200" text="Title" />
+                <TableColumn fx:id="lawyerMyCasesStatusCol" prefWidth="150" text="Status" />
+                <TableColumn fx:id="lawyerMyCasesLastUpdateCol" prefWidth="150" text="Last Updated" />
+            </columns>
+        </TableView>
 
     </AnchorPane>
-
 </AnchorPane>

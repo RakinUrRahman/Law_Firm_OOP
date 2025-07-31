@@ -1,57 +1,18 @@
 package rakin;
 
-public class LawyerDashboardController
+public class LawyerClientMessageController
 {
-
     @javafx.fxml.FXML
-    private TableView lawyerMyCasesTV;
+    private TextArea lawyerClientMessageTA;
     @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesLastUpdateCol;
+    private TextField lawyerRecipientTF;
     @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesTitleCol;
+    private TableView lawyerClientMessageTV;
     @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesStatusCol;
-    @javafx.fxml.FXML
-    private AnchorPane mainContentPane;
-    @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesCaseIdCol;
-    @javafx.fxml.FXML
-    private TextField lawyerSearchCaseIdTF;
+    private Button lawyerClientMessageSendButtonOnClick;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @Deprecated
-    public void logout(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void requestExpert(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void openMessages(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void joinHearing(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void openDraft(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void openCaseList(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void closeCase(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void submitReport(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -80,6 +41,10 @@ public class LawyerDashboardController
 
     @javafx.fxml.FXML
     public void lawyerAskExpertButtonOnClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sendMessageButtonOnClick(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
