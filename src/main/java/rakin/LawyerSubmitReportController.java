@@ -1,13 +1,11 @@
 package rakin;
 
-public class LawyerDraftDocumentController
+public class LawyerSubmitReportController
 {
     @javafx.fxml.FXML
-    private TextArea lawyerDraftDocumentTA;
+    private TextArea lawyerSubmitReportSummaryTA;
     @javafx.fxml.FXML
-    private Label lawyerDraftDocumentLabel;
-    @javafx.fxml.FXML
-    private TextField lawyerDraftDocumentTF;
+    private TextField lawyerSubmitReportTitleTF;
     @javafx.fxml.FXML
     private Button generateReportButton;
 
@@ -20,10 +18,6 @@ public class LawyerDraftDocumentController
     }
 
     @javafx.fxml.FXML
-    public void lawyerDraftDocumentsSaveDraftButtonOnClick(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void lawyerDraftDocumentsButtonOnClick(ActionEvent actionEvent) {
     }
 
@@ -32,15 +26,15 @@ public class LawyerDraftDocumentController
     }
 
     @javafx.fxml.FXML
-    public void lawyerDraftDocumentsClearButtonOnClick(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void LawyerSubmitReportButtonOnClick(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void lawyerMyCasesButtonOnClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void lawyerSubmitReportSubmitButtonOnClick(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -60,6 +54,6 @@ public class LawyerDraftDocumentController
     }
 
     @javafx.fxml.FXML
-    public void LawyerDraftDocumentGenerateReportButtonOnClick(ActionEvent actionEvent) {
+    public void LawyerSubmitCasesGenerateReportButtonOnClick(ActionEvent actionEvent) {
     }
 }

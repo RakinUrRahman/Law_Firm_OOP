@@ -1,59 +1,18 @@
 package rakin;
 
-public class LawyerDashboardController
+public class LawyerCloseCaseController
 {
-
     @javafx.fxml.FXML
-    private TableView lawyerMyCasesTV;
+    private TextField lawyerCloseCaseCaseIdTF;
     @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesLastUpdateCol;
+    private Button lawyerCloseCaseButtonOnClick;
     @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesTitleCol;
-    @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesStatusCol;
-    @javafx.fxml.FXML
-    private AnchorPane mainContentPane;
-    @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesCaseIdCol;
-    @javafx.fxml.FXML
-    private TextField lawyerSearchCaseIdTF;
+    private TextArea lawyerCloseCaseRemarksTA;
     @javafx.fxml.FXML
     private Button generateReportButton;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @Deprecated
-    public void logout(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void requestExpert(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void openMessages(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void joinHearing(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void openDraft(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void openCaseList(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void closeCase(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void submitReport(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -77,6 +36,10 @@ public class LawyerDashboardController
     }
 
     @javafx.fxml.FXML
+    public void handleCloseCase(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
     public void lawyerCloseCaseButtonOnClick(ActionEvent actionEvent) {
     }
 
@@ -93,6 +56,6 @@ public class LawyerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void LawyerMyCasesGenerateReportButtonOnClick(ActionEvent actionEvent) {
+    public void LawyerCloseCaseGenerateReportButtonOnClick(ActionEvent actionEvent) {
     }
 }
