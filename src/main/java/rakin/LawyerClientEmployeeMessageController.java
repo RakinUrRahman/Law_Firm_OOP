@@ -1,15 +1,19 @@
 package rakin;
 
-public class LawyerDraftDocumentController
+public class LawyerClientEmployeeMessageController
 {
     @javafx.fxml.FXML
-    private TextArea lawyerDraftDocumentTA;
+    private TableView lawyerMessageTV;
     @javafx.fxml.FXML
-    private Label lawyerDraftDocumentLabel;
+    private TextArea lawyerMessageNewMessageTA;
     @javafx.fxml.FXML
-    private TextField lawyerDraftDocumentTF;
+    private TableColumn lawyerMessageSenderCol;
     @javafx.fxml.FXML
-    private Button generateReportButton;
+    private TableColumn lawyerMessageMessageCol;
+    @javafx.fxml.FXML
+    private TableColumn lawyerMessageRecipientCol;
+    @javafx.fxml.FXML
+    private ComboBox lawyerMessageRecipientCB;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -17,10 +21,6 @@ public class LawyerDraftDocumentController
 
     @javafx.fxml.FXML
     public void LawyerClientMessagesButtonOnClick(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void lawyerDraftDocumentsSaveDraftButtonOnClick(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -32,15 +32,15 @@ public class LawyerDraftDocumentController
     }
 
     @javafx.fxml.FXML
-    public void lawyerDraftDocumentsClearButtonOnClick(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void LawyerSubmitReportButtonOnClick(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void lawyerMyCasesButtonOnClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void lawyerMessageSendButtonOnClick(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -57,9 +57,5 @@ public class LawyerDraftDocumentController
 
     @javafx.fxml.FXML
     public void lawyerDashboardButtonOnClick(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void LawyerDraftDocumentGenerateReportButtonOnClick(ActionEvent actionEvent) {
     }
 }
