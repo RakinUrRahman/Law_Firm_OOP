@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirm_oop_officeadmin.Staffrecord">
+   <children>
+      <Label layoutX="207.0" layoutY="14.0" text="Manage Staff Records">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="300.0" layoutY="41.0" startX="-100.0" />
+      <Label layoutX="122.0" layoutY="60.0" text="Staff Table" />
+      <TableView layoutX="14.0" layoutY="86.0" prefHeight="200.0" prefWidth="303.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Name" />
+          <TableColumn prefWidth="75.0" text="Role" />
+            <TableColumn prefWidth="75.0" text="Phone" />
+            <TableColumn prefWidth="75.0" text="Email" />
+        </columns>
+      </TableView>
+      <Label layoutX="436.0" layoutY="60.0" text="ADD/ EDIT FORM" />
+      <Text layoutX="401.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+      <TextField layoutX="444.0" layoutY="82.0" />
+      <Text layoutX="407.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role: " />
+      <ComboBox layoutX="443.0" layoutY="118.0" prefWidth="150.0" />
+      <Text layoutX="378.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone No.:" />
+      <TextField layoutX="443.0" layoutY="154.0" />
+      <Text layoutX="392.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+      <TextField layoutX="444.0" layoutY="187.0" />
+      <Button layoutX="436.0" layoutY="223.0" mnemonicParsing="false" text="Add" />
+      <Button layoutX="482.0" layoutY="223.0" mnemonicParsing="false" text="Update" />
+      <Button layoutX="542.0" layoutY="223.0" mnemonicParsing="false" text="Delete" />
+      <Label layoutX="364.0" layoutY="269.0" prefHeight="42.0" prefWidth="246.0" />
+   </children>
+</AnchorPane>
