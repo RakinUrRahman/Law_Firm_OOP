@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakin.FinancialOfficerDashboardController">
+
+    <!-- Top Header -->
+    <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <padding>
+            <Insets left="20" />
+        </padding>
+        <children>
+            <Label style="-fx-text-fill: white;" text="Welcome, Financial Officer">
+                <font>
+                    <Font name="Segoe UI Bold" size="22" />
+                </font>
+            </Label>
+        </children>
+    </HBox>
+
+    <!-- Left Navigation -->
+    <VBox prefWidth="180" spacing="12" style="-fx-background-color: #16a085;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
+        <padding>
+            <Insets bottom="15" left="10" right="10" top="25" />
+        </padding>
+        <children>
+            <Button onAction="#viewClientPaymentHistory" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payment History" />
+            <Button onAction="#generateMonthlyReports" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Monthly Financial Reports" />
+            <Button onAction="#approveRejectPayments" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Approve/Reject Payments" />
+            <Button onAction="#updateBillingRates" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Update Billing Rates" />
+            <Button onAction="#monitorOutstandingDues" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Monitor Outstanding Dues" />
+            <Button onAction="#logNewTransactions" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Log New Transactions" />
+            <Button onAction="#auditBillingErrors" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Audit Billing Errors" />
+            <Button onAction="#exportFinancialStatements" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Export Financial Statements" />
+            <Separator prefWidth="160" />
+            <Button onAction="#logout" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Logout" />
+        </children>
+    </VBox>
+
+    <!-- Main Content Area: Financial Report Page UI directly embedded -->
+    <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
+        <children>
+            <VBox spacing="15" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+
+                <!-- Title -->
+                <Label text="Generate Financial Report">
+                    <font>
+                        <Font size="24" />
+                    </font>
+                </Label>
+
+                <!-- Filters Section -->
+                <HBox spacing="20">
+                    <Label text="Select Month:" />
+                    <ComboBox fx:id="monthComboBox" prefWidth="150" promptText="Month" />
+                    <Label text="Select Year:" />
+                    <TextField fx:id="yearTextField" prefWidth="80" promptText="Year" />
+                    <Button text="Generate" onAction="#onGenerateReport" />
+                </HBox>
+
+                <!-- Report Table -->
+                <TableView fx:id="reportTable" prefHeight="350">
+                    <columns>
+                        <TableColumn fx:id="colClient" text="Client" prefWidth="150"/>
+                        <TableColumn fx:id="colAmount" text="Amount" prefWidth="120"/>
+                        <TableColumn fx:id="colDate" text="Date" prefWidth="150"/>
+                        <TableColumn fx:id="colStatus" text="Status" prefWidth="120"/>
+                    </columns>
+                </TableView>
+
+                <!-- Export Buttons -->
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button text="Export as PDF" onAction="#onExportPDF" />
+                    <Button text="Export as Excel" onAction="#onExportExcel" />
+                </HBox>
+
+            </VBox>
+        </children>
+    </AnchorPane>
+
+</AnchorPane>
