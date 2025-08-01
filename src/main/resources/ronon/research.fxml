@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirm_oop_paralegal_assistent.Research">
+   <children>
+      <Label layoutX="227.0" layoutY="14.0" text="Research Case Law">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="306.0" layoutY="41.0" startX="-100.0" />
+      <TextField layoutX="57.0" layoutY="56.0" promptText="Enter Keyword" />
+      <Button layoutX="217.0" layoutY="56.0" mnemonicParsing="false" text="Search" />
+      <Text layoutX="34.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year: " />
+      <ComboBox layoutX="63.0" layoutY="90.0" prefWidth="150.0" />
+      <Text layoutX="17.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jurisdiction:" />
+      <ComboBox layoutX="92.0" layoutY="118.0" prefWidth="150.0" />
+      <Text layoutX="26.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" />
+      <ComboBox layoutX="63.0" layoutY="146.0" prefWidth="150.0" />
+      <Label layoutX="35.0" layoutY="183.0" text="Top 3 Result:" />
+      <VBox layoutX="117.0" layoutY="183.0" prefHeight="70.0" prefWidth="186.0">
+         <children>
+            <Label text="Result 1 show here" />
+            <Label text="Result 2 show here" />
+            <Label text="Result 3 show here" />
+         </children>
+      </VBox>
+      <TextArea layoutX="67.0" layoutY="245.0" prefHeight="116.0" prefWidth="200.0" />
+      <Text layoutX="25.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note:" />
+      <Button layoutX="280.0" layoutY="336.0" mnemonicParsing="false" text="Save Notes" />
+      <Button layoutX="359.0" layoutY="336.0" mnemonicParsing="false" text="Attach to Case" />
+      <Label layoutX="65.0" layoutY="369.0" prefHeight="18.0" prefWidth="201.0" />
+   </children>
+</AnchorPane>
