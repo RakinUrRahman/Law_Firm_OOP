@@ -13,7 +13,6 @@
 
 <AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakin.FinancialOfficerClientPaymentController">
 
-    <!-- Top Header -->
     <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
         <padding>
             <Insets left="20"/>
@@ -27,7 +26,6 @@
         </children>
     </HBox>
 
-    <!-- Sidebar -->
     <VBox prefWidth="180" spacing="12" style="-fx-background-color: #16a085;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
         <padding>
             <Insets top="25" bottom="15" left="10" right="10"/>
@@ -47,7 +45,6 @@
         </children>
     </VBox>
 
-    <!-- Main Content Area -->
     <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
         <VBox spacing="20" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
             <padding>

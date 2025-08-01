@@ -11,7 +11,6 @@
 
 <AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakin.FinancialOfficerDashboardController">
 
-    <!-- Top Header -->
     <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
         <padding>
             <Insets left="20" />
@@ -25,7 +24,6 @@
         </children>
     </HBox>
 
-    <!-- Left Navigation -->
     <VBox prefWidth="180" spacing="12" style="-fx-background-color: #16a085;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
         <padding>
             <Insets bottom="15" left="10" right="10" top="25" />
@@ -46,7 +44,6 @@
         </children>
     </VBox>
 
-    <!-- Main Content Area -->
     <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
         <children>
             <Label layoutX="21.0" layoutY="29.0" style="-fx-text-fill: #2c3e50;" text="Dashboard" textOverrun="CLIP">

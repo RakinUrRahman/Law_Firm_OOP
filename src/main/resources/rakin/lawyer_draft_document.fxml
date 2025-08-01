@@ -46,7 +46,6 @@
 
     <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
         <children>
-            <!-- VBox fills the AnchorPane with padding -->
             <VBox spacing="10" style="-fx-padding: 10;" AnchorPane.bottomAnchor="80" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
                 <children>
                     <Label text="Draft a New Legal Document">
@@ -70,7 +69,6 @@
 
                     <Label style="-fx-font-weight: bold;" text="Saved Drafts:" />
       
-                  <!-- Label and Button positioned below VBox -->
                   <Label fx:id="lawyerDraftDocumentLabel" prefHeight="60" prefWidth="600" style="-fx-font-weight: bold; -fx-background-color: white;" />
                 </children>
             </VBox>

@@ -13,7 +13,6 @@
 
 <AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakin.LawyerProfileController">
 
-    <!-- Top Header -->
     <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #2c3e50;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
         <padding>
             <Insets left="20" />
@@ -27,7 +26,6 @@
         </children>
     </HBox>
 
-    <!-- Left Navigation -->
     <VBox prefWidth="180" spacing="12" style="-fx-background-color: #34495e;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
         <padding>
             <Insets bottom="15" left="10" right="10" top="25" />
@@ -42,7 +40,6 @@
             <Button onAction="#lawyerAskExpertButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Ask Expert" />
             <Button onAction="#lawyerCloseCaseButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Close Case" />
 
-            <!-- Highlighted My Profile Button -->
             <Button onAction="#lawyerProfileButtonOnClick" prefWidth="160" style="-fx-background-color: #1abc9c; -fx-text-fill: white;" text="My Profile" />
 
             <Separator prefWidth="160" />
@@ -50,7 +47,6 @@
         </children>
     </VBox>
 
-    <!-- Main Content Area -->
     <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
         <children>
 
@@ -60,7 +56,6 @@
                 </font>
             </Label>
 
-            <!-- Profile Form -->
             <VBox spacing="15" prefWidth="600" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="60">
                 <children>
                     <Label text="Name:" />
