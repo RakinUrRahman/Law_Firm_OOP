@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakin.FinancialOfficerDashboardController">
+
+    <!-- Top Header -->
+    <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <padding>
+            <Insets left="20" />
+        </padding>
+        <children>
+            <Label style="-fx-text-fill: white;" text="Welcome, Financial Officer">
+                <font>
+                    <Font name="Segoe UI Bold" size="22" />
+                </font>
+            </Label>
+        </children>
+    </HBox>
+
+    <!-- Left Navigation -->
+    <VBox prefWidth="180" spacing="12" style="-fx-background-color: #16a085;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
+        <padding>
+            <Insets bottom="15" left="10" right="10" top="25" />
+        </padding>
+        <children>
+            <Button onAction="#viewClientPaymentsOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payments" />
+            <Button onAction="#generateFinancialReportOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Monthly Reports" />
+            <Button onAction="#approveRejectPaymentOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Payment Requests" />
+            <Button onAction="#updateBillingRateOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Billing Rates" />
+            <Button onAction="#monitorOutstandingDuesOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Outstanding Dues" />
+            <Button onAction="#logNewTransactionOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="New Transaction" />
+            <Button onAction="#auditBillingErrorsOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Billing Audits" />
+            <Button onAction="#exportFinancialStatementsOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Export Statements" />
+            <Separator prefWidth="160" />
+            <Button onAction="#logoutOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Logout" />
+        </children>
+    </VBox>
+
+    <!-- Main Content Area -->
+    <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
+        <children>
+            <Label layoutX="21.0" layoutY="29.0" style="-fx-text-fill: #2c3e50;" text="Dashboard" textOverrun="CLIP">
+                <font>
+                    <Font name="Segoe UI Bold" size="22" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+
+</AnchorPane>
