@@ -78,4 +78,5 @@ public class InterviewSchedule
 
     @javafx.fxml.FXML
     public void editbuttonhandle(ActionEvent actionEvent) {
+            }
     }
