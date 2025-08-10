@@ -10,7 +10,7 @@ public class UploadMaterials
     @javafx.fxml.FXML
     private TextField filepdfnametf;
     @javafx.fxml.FXML
-    private ComboBox categorycb;
+    private ComboBox<String> categorycb;
     @javafx.fxml.FXML
     private TextField filenametf;
     @javafx.fxml.FXML
@@ -18,6 +18,8 @@ public class UploadMaterials
 
     @javafx.fxml.FXML
     public void initialize() {
+        categorycb.getItems().addAll("Contracts", "Case Files", "Legal Forms", "Court Notices");
+
     }
 
     @javafx.fxml.FXML
@@ -26,9 +28,21 @@ public class UploadMaterials
 
     @javafx.fxml.FXML
     public void cancelhandlebutton(ActionEvent actionEvent) {
+        filenametf.clear();
+        categorycb.setValue(null);
+        filepdfnametf.clear();
     }
 
     @javafx.fxml.FXML
     public void uploadhandlebutton(ActionEvent actionEvent) {
+        String fileName = filenametf.getText();
+        String category = categorycb.getValue();
+        String filePdfName = filepdfnametf.getText();
+
+        if (fileName.isEmpty() || category == null || filePdfName.isEmpty()) {
+            errormsglabel.setText("Please fill in all fields.");
+            return;
+        }
+
     }
 }
