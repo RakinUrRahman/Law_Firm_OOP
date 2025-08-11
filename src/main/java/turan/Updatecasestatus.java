@@ -8,11 +8,11 @@ import javafx.scene.control.TextField;
 public class Updatecasestatus
 {
     @javafx.fxml.FXML
-    private ComboBox selectcaseidcb;
+    private ComboBox<String> selectcaseidcb;
     @javafx.fxml.FXML
     private TextField remarkstf;
     @javafx.fxml.FXML
-    private ComboBox newstatusCb;
+    private ComboBox<String> newstatusCb;
     @javafx.fxml.FXML
     private Label errormsglabel;
     @javafx.fxml.FXML
@@ -20,6 +20,26 @@ public class Updatecasestatus
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectcaseidcb.getItems().addAll("C001", "C002", "C003", "C004");
+        newstatusCb.getItems().addAll("Open", "In Progress", "Closed", "On Hold");
+
+        selectcaseidcb.setOnAction(e -> {
+            String selectedCase = selectcaseidcb.getValue();
+            if (selectedCase != null && !selectedCase.isEmpty()) {
+                if (selectedCase.equals("C001")) {
+                    statusofcaselabel.setText("Current Status: Open");
+                } else if (selectedCase.equals("C002")) {
+                    statusofcaselabel.setText("Current Status: In Progress");
+                } else if (selectedCase.equals("C003")) {
+                    statusofcaselabel.setText("Current Status: Closed");
+                } else if (selectedCase.equals("C004")) {
+                    statusofcaselabel.setText("Current Status: On Hold");
+                } else {
+                    statusofcaselabel.setText("Current Status: Unknown");
+                }
+                errormsglabel.setText("Select Accordingly");
+            }
+        });
     }
 
     @javafx.fxml.FXML
