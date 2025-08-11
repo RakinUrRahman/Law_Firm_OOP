@@ -18,12 +18,14 @@ public class ScheduleMeeting
     @javafx.fxml.FXML
     private TextField meetinttitleTf;
     @javafx.fxml.FXML
-    private ComboBox selectcasecbcb;
+    private ComboBox<String> selectcasecbcb;
     @javafx.fxml.FXML
     private Label errormsglabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectcasecbcb.getItems().addAll("C001", "C002", "C003", "C004");
+
     }
 
     @javafx.fxml.FXML
@@ -32,5 +34,17 @@ public class ScheduleMeeting
 
     @javafx.fxml.FXML
     public void schedulebuttonhandle(ActionEvent actionEvent) {
+        String title = meetinttitleTf.getText();
+        String selectedCase = selectcasecbcb.getValue();
+        boolean lawyer = LawyerCheckb.isSelected();
+        boolean paralegal = ParalegalCheckB.isSelected();
+        boolean inPerson = inpersonrb.isSelected();
+        boolean online = onlinerb.isSelected();
+        String date = meetingdp.getValue() != null ? meetingdp.getValue().toString() : "";
+
+        if (title.isEmpty() || selectedCase == null || (!lawyer && !paralegal) || (!inPerson && !online) || date.isEmpty()) {
+            errormsglabel.setText("Please fill in all fields.");
+            return;
+        }
     }
 }
