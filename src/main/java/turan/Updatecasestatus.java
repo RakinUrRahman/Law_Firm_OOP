@@ -48,5 +48,13 @@ public class Updatecasestatus
 
     @javafx.fxml.FXML
     public void updatebuttonhandle(ActionEvent actionEvent) {
+        String caseId = selectcaseidcb.getValue();
+        String newStatus = newstatusCb.getValue();
+        String remarks = remarkstf.getText();
+
+        if (caseId.isEmpty() || newStatus.isEmpty() || remarks.isEmpty()) {
+            errormsglabel.setText("Please fill in all fields.");
+            return;
+    }
     }
 }
