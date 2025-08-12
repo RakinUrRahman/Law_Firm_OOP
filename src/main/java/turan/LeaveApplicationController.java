@@ -9,7 +9,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
 
-public class LeaveApplication
+public class LeaveApplicationController
 {
 
     @javafx.fxml.FXML

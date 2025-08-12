@@ -6,7 +6,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 
-public class GenerateWeeklysummary
+public class GenerateWeeklysummaryController
 {
     @javafx.fxml.FXML
     private RadioButton weeklyrb;

@@ -6,7 +6,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
-public class EmployeeAttendace
+public class EmployeeAttendaceController
 {
     @javafx.fxml.FXML
     private TableView<EmAttendanceModel> attendanceTV;

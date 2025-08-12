@@ -3,7 +3,7 @@ package turan;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
-public class ScheduleMeeting
+public class ScheduleMeetingController
 {
     @javafx.fxml.FXML
     private CheckBox ParalegalCheckB;

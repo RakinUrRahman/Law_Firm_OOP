@@ -6,7 +6,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
-public class InterviewSchedule
+public class InterviewScheduleController
 {
     @javafx.fxml.FXML
     private TableColumn<Interview, String> interviewtypeTVC;
@@ -63,12 +63,14 @@ public class InterviewSchedule
             interviewType = "In Person";
         } else if (onlinerb.isSelected()) {
             interviewType = "Online";
+        }
 
 
             if (candidateName.isEmpty() || position.isEmpty() || interviewer.isEmpty() || interviewDate == null || interviewType.isEmpty()) {
 
                 errormsglabel.setText("Please fill all fields.");
                 return;
+            }
 
                 Interview interview = new Interview(candidateName, position, interviewDate.toString(), interviewType);
                 interviewTV.getItems().add(interview);
@@ -78,5 +80,7 @@ public class InterviewSchedule
 
     @javafx.fxml.FXML
     public void editbuttonhandle(ActionEvent actionEvent) {
-            }
     }
+}
+
+

@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class Feedback
+public class FeedbackController
 {
     @javafx.fxml.FXML
     private TextField responsetf;

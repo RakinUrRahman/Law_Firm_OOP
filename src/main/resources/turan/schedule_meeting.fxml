@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="turan.ScheduleMeeting">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="turan.ScheduleMeetingController">
    <children>
       <Label layoutX="126.0" layoutY="47.0" text="SCHEDULE CASE MEETING " />
       <Label layoutX="72.0" layoutY="89.0" text="Meeting Title" />
