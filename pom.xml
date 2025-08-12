@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>rakin.law_firm_oop/rakin.HelloApplication</mainClass>
+                            <mainClass>mainpkg.lawfirm.rakin.law_firm_oop/mainpkg.lawfirm.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
