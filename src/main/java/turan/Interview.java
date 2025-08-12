@@ -50,7 +50,7 @@ public class Interview {
                 '}';
     }
 
-    public Interview(String candidateName, String position, LocalDate date, String interviewType) {
+    public Interview(String candidateName, String position, String date, String interviewType) {
         this.candidateName = candidateName;
         this.position = position;
         this.date = date;
