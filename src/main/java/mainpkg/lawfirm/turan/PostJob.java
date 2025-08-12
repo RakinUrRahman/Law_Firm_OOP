@@ -5,7 +5,7 @@ import javafx.scene.control.*;
 
 import java.time.LocalDate;
 
-public class PostJob
+public class PostJobController
 {
     @javafx.fxml.FXML
     private TextField jobpost;

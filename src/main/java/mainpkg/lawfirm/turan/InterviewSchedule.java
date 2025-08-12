@@ -7,9 +7,15 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
+<<<<<<<< HEAD:src/main/java/mainpkg/lawfirm/turan/InterviewSchedule.java
 public class InterviewSchedule {
 
     @FXML
+========
+public class InterviewScheduleController
+{
+    @javafx.fxml.FXML
+>>>>>>>> ffeee80db2b07aedbd0c59b8b33f1f5bbc29138a:src/main/java/mainpkg/lawfirm/turan/InterviewScheduleController.java
     private TableColumn<Interview, String> interviewtypeTVC;
     @FXML
     private TextField candidatetb;
@@ -77,9 +83,15 @@ public class InterviewSchedule {
             return;
         }
 
+<<<<<<<< HEAD:src/main/java/mainpkg/lawfirm/turan/InterviewSchedule.java
         // Pass LocalDate directly instead of String
         Interview interview = new Interview(candidateName, position, interviewDate, interviewType);
         interviewTV.getItems().add(interview);
+========
+                errormsglabel.setText("Please fill all fields.");
+                return;
+            }
+>>>>>>>> ffeee80db2b07aedbd0c59b8b33f1f5bbc29138a:src/main/java/mainpkg/lawfirm/turan/InterviewScheduleController.java
 
         errormsglabel.setText("Interview scheduled successfully!");
     }
@@ -88,3 +100,8 @@ public class InterviewSchedule {
     public void editbuttonhandle(ActionEvent actionEvent) {
     }
 }
+<<<<<<<< HEAD:src/main/java/mainpkg/lawfirm/turan/InterviewSchedule.java
+========
+
+
+>>>>>>>> ffeee80db2b07aedbd0c59b8b33f1f5bbc29138a:src/main/java/mainpkg/lawfirm/turan/InterviewScheduleController.java

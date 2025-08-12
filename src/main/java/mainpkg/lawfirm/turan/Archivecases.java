@@ -3,7 +3,7 @@ package mainpkg.lawfirm.turan;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
-public class Archivecases
+public class ArchivecasesController
 {
     @javafx.fxml.FXML
     private ComboBox selectcaseidcb;

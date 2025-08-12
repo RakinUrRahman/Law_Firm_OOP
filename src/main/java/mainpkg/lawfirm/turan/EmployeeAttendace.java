@@ -5,8 +5,13 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.time.LocalDate;
 
+<<<<<<<< HEAD:src/main/java/mainpkg/lawfirm/turan/EmployeeAttendace.java
 public class EmployeeAttendace {
 
+========
+public class EmployeeAttendaceController
+{
+>>>>>>>> ffeee80db2b07aedbd0c59b8b33f1f5bbc29138a:src/main/java/mainpkg/lawfirm/turan/EmployeeAttendaceController.java
     @javafx.fxml.FXML
     private TableView<EmAttendanceModel> attendanceTV;
     @javafx.fxml.FXML
