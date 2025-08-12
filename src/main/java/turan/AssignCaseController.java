@@ -6,7 +6,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class AssignCase
+public class AssignCaseController
 {
     @javafx.fxml.FXML
     private TextField caseidtf;
