@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.turan.Archivecases">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.turan.ArchivecasesController">
    <children>
       <Label layoutX="99.0" layoutY="53.0" text="ARCHIVE COMPLETED CASES" />
       <TableView fx:id="archivecaseTV" layoutX="46.0" layoutY="83.0" prefHeight="115.0" prefWidth="362.0">

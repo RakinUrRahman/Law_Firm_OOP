@@ -55,6 +55,6 @@ public class UpdatecasestatusController
         if (caseId.isEmpty() || newStatus.isEmpty() || remarks.isEmpty()) {
             errormsglabel.setText("Please fill in all fields.");
             return;
-    }
+        }
     }
 }

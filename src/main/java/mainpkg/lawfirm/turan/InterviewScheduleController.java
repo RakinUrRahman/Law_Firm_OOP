@@ -1,64 +1,60 @@
 package mainpkg.lawfirm.turan;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
-<<<<<<<< HEAD:src/main/java/mainpkg/lawfirm/turan/InterviewSchedule.java
-public class InterviewSchedule {
+public class InterviewScheduleController {
 
-    @FXML
-========
-public class InterviewScheduleController
-{
     @javafx.fxml.FXML
->>>>>>>> ffeee80db2b07aedbd0c59b8b33f1f5bbc29138a:src/main/java/mainpkg/lawfirm/turan/InterviewScheduleController.java
     private TableColumn<Interview, String> interviewtypeTVC;
-    @FXML
+    @javafx.fxml.FXML
     private TextField candidatetb;
-    @FXML
+    @javafx.fxml.FXML
     private DatePicker interviewdp;
-    @FXML
+    @javafx.fxml.FXML
     private RadioButton onlinerb;
-    @FXML
+    @javafx.fxml.FXML
     private TableColumn<Interview, String> positionTVC;
-    @FXML
+    @javafx.fxml.FXML
     private ComboBox<String> positioncb;
-    @FXML
+    @javafx.fxml.FXML
     private ComboBox<String> interviewercb;
-    @FXML
+    @javafx.fxml.FXML
     private TableColumn<Interview, String> candidatenameTVC;
-    @FXML
+    @javafx.fxml.FXML
     private RadioButton inpersonrb;
-    @FXML
+    @javafx.fxml.FXML
     private TableColumn<Interview, String> DateTVC;
-    @FXML
+    @javafx.fxml.FXML
     private TableView<Interview> interviewTV;
-    @FXML
+    @javafx.fxml.FXML
     private Label errormsglabel;
 
-    @FXML
+    @javafx.fxml.FXML
     public void initialize() {
+        // Link table columns to Interview class properties
         candidatenameTVC.setCellValueFactory(new PropertyValueFactory<>("candidateName"));
         positionTVC.setCellValueFactory(new PropertyValueFactory<>("position"));
         DateTVC.setCellValueFactory(new PropertyValueFactory<>("date"));
         interviewtypeTVC.setCellValueFactory(new PropertyValueFactory<>("interviewType"));
 
+        // Populate ComboBoxes
         positioncb.getItems().addAll("Lawyer", "Paralegal", "Legal Assistant", "Case Manager");
         interviewercb.getItems().addAll("Turan", "Rafsan", "Rakin", "Muhit", "Ronon", "Sojib", "Arafat");
 
+        // Clear error message initially
         errormsglabel.setText("");
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void backbuttonhandle(ActionEvent actionEvent) {
-        // TODO: Implement back navigation
+        // TODO: Implement navigation logic if needed
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void schedulebuttonhandle(ActionEvent actionEvent) {
         String candidateName = candidatetb.getText();
         String position = positioncb.getValue();
@@ -72,36 +68,33 @@ public class InterviewScheduleController
             interviewType = "Online";
         }
 
-        // Validate inputs
-        if (candidateName == null || candidateName.isEmpty() ||
-                position == null || position.isEmpty() ||
-                interviewer == null || interviewer.isEmpty() ||
-                interviewDate == null ||
-                interviewType == null || interviewType.isEmpty()) {
+        // Validation
+        if (candidateName == null || candidateName.trim().isEmpty()
+                || position == null || position.trim().isEmpty()
+                || interviewer == null || interviewer.trim().isEmpty()
+                || interviewDate == null
+                || interviewType == null) {
 
             errormsglabel.setText("Please fill all fields.");
             return;
         }
 
-<<<<<<<< HEAD:src/main/java/mainpkg/lawfirm/turan/InterviewSchedule.java
-        // Pass LocalDate directly instead of String
+        // Add to table
         Interview interview = new Interview(candidateName, position, interviewDate, interviewType);
         interviewTV.getItems().add(interview);
-========
-                errormsglabel.setText("Please fill all fields.");
-                return;
-            }
->>>>>>>> ffeee80db2b07aedbd0c59b8b33f1f5bbc29138a:src/main/java/mainpkg/lawfirm/turan/InterviewScheduleController.java
 
-        errormsglabel.setText("Interview scheduled successfully!");
+        // Clear form after adding
+        candidatetb.clear();
+        positioncb.setValue(null);
+        interviewercb.setValue(null);
+        interviewdp.setValue(null);
+        inpersonrb.setSelected(false);
+        onlinerb.setSelected(false);
+        errormsglabel.setText("");
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void editbuttonhandle(ActionEvent actionEvent) {
+        // TODO: Implement edit logic if needed
     }
 }
-<<<<<<<< HEAD:src/main/java/mainpkg/lawfirm/turan/InterviewSchedule.java
-========
-
-
->>>>>>>> ffeee80db2b07aedbd0c59b8b33f1f5bbc29138a:src/main/java/mainpkg/lawfirm/turan/InterviewScheduleController.java

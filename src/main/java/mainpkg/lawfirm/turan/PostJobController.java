@@ -68,4 +68,3 @@ public class PostJobController
     @javafx.fxml.FXML
     public void backbuttonhandle(ActionEvent actionEvent) {
     }}
-
