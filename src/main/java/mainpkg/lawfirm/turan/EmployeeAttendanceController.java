@@ -3,10 +3,11 @@ package turan;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import mainpkg.lawfirm.turan.EmAttendanceModel;
 
 import java.time.LocalDate;
 
-public class EmployeeAttendaceController
+public class EmployeeAttendanceController
 {
     @javafx.fxml.FXML
     private TableView<EmAttendanceModel> attendanceTV;
