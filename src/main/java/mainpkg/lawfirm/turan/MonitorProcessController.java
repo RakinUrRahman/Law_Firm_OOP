@@ -10,7 +10,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MonitorProcess
+public class MonitorProcessController
 {
     @javafx.fxml.FXML
     private TableColumn<MonitorProcessModel, String> assignedtoTVC;
