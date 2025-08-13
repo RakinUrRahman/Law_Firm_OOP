@@ -64,6 +64,8 @@ public class EmployeeAttendaceController
             errormsglabel.setText("Please fill in all fields.");
             return;
 
+        }
+
             EmAttendanceModel attendance = new EmAttendanceModel(employeeId, employeeName, department, date, status);
             attendanceTV.getItems().add(attendance);
 
@@ -72,4 +74,4 @@ public class EmployeeAttendaceController
         }
 
 
-}}
+}
