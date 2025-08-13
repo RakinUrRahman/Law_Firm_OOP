@@ -9,21 +9,7 @@ public class LawyerDashboardController
 {
 
     @javafx.fxml.FXML
-    private TableView lawyerMyCasesTV;
-    @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesLastUpdateCol;
-    @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesTitleCol;
-    @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesStatusCol;
-    @javafx.fxml.FXML
-    private AnchorPane mainContentPane;
-    @javafx.fxml.FXML
-    private TableColumn lawyerMyCasesCaseIdCol;
-    @javafx.fxml.FXML
-    private TextField lawyerSearchCaseIdTF;
-    @javafx.fxml.FXML
-    private Button generateReportButton;
+    private TextArea infoTA;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -97,7 +83,15 @@ public class LawyerDashboardController
     public void lawyerDashboardButtonOnClick(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void LawyerMyCasesGenerateReportButtonOnClick(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void LawyerAccountButtonOnClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void lawyerProfileButtonOnClick(ActionEvent actionEvent) {
     }
 }
