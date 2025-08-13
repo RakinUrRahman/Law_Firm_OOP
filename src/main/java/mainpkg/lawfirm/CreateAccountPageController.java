@@ -70,5 +70,13 @@ public class CreateAccountPageController
         outputTA.clear();
         outputTA.setText(lawyer.toString() );
 
+
+        nameTextField.clear();
+        emailTextField.clear();
+        phoneNoTextField.clear();
+        emergencyContactTF.clear();
+        addressTextArea.clear();
+        passwordField.clear();
+
     }
 }

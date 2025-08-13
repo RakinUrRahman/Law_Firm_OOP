@@ -17,6 +17,7 @@ public class LoginPageController {
 
     @javafx.fxml.FXML
     public void loginButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Login Page");
 
         String id, password;
         boolean flag = true;
@@ -32,6 +33,8 @@ public class LoginPageController {
             flag = false;
             alert.setTitle("User Id Error");
             alert.setContentText("User Id Can Not Be Blank");
+            alert.showAndWait();
+
 
 
         }
@@ -40,6 +43,7 @@ public class LoginPageController {
             flag = false;
             alert.setTitle("Password Id Error");
             alert.setContentText("Password Id Can Not Be Blank");
+            alert.showAndWait();
 
         }
         if (flag) {
@@ -62,6 +66,7 @@ public class LoginPageController {
             } else {
                 alert.setTitle("User Id Error");
                 alert.setContentText("User Id Type Does Not Exist");
+                alert.showAndWait();
 
             }
 
