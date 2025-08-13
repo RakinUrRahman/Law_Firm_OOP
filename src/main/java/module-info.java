@@ -1,8 +1,14 @@
-module rakin.law_firm_oop {
+module mainpkg.lawfirm.rakin.law_firm_oop {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
+    opens mainpkg.lawfirm to javafx.fxml;
 
-    opens rakin to javafx.fxml;
-    exports rakin;
+    opens mainpkg.lawfirm.rakin to javafx.fxml, javafx.base;
+    opens mainpkg.lawfirm.arafat to javafx.fxml, javafx.base;
+    opens mainpkg.lawfirm.turan to javafx.fxml, javafx.base;
+    opens mainpkg.lawfirm.ronon to javafx.fxml, javafx.base;
+
+    exports mainpkg.lawfirm;
 }

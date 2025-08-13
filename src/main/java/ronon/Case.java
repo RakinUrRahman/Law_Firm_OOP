@@ -1,7 +1,0 @@
-package com.example.lawfirm_oop_paralegal_assistent;
-
-public class Case
-{
-    @javafx.fxml.FXML
-    public void initialize() {
-    }}
