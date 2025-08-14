@@ -1,40 +1,40 @@
-package mainpkg.lawfirm.turan;
+package turan;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import mainpkg.lawfirm.turan.EmAttendanceModel;
 
 import java.time.LocalDate;
 
-class EmployeeAttendanceController {
-
-    @FXML
+public class EmployeeAttendanceController
+{
+    @javafx.fxml.FXML
     private TableView<EmAttendanceModel> attendanceTV;
-    @FXML
+    @javafx.fxml.FXML
     private TextField employeenametf;
-    @FXML
+    @javafx.fxml.FXML
     private TableColumn<EmAttendanceModel, String> departmentTVC;
-    @FXML
+    @javafx.fxml.FXML
     private TableColumn<EmAttendanceModel, String> dateTVC;
-    @FXML
+    @javafx.fxml.FXML
     private TableColumn<EmAttendanceModel, String> statusTVC;
-    @FXML
+    @javafx.fxml.FXML
     private TableColumn<EmAttendanceModel, String> employeenameTVC;
-    @FXML
+    @javafx.fxml.FXML
     private TableColumn<EmAttendanceModel, String> employeeidTVC;
-    @FXML
+    @javafx.fxml.FXML
     private ComboBox<String> statuscb;
-    @FXML
+    @javafx.fxml.FXML
     private DatePicker datedp;
-    @FXML
+    @javafx.fxml.FXML
     private ComboBox<String> deptcb;
-    @FXML
+    @javafx.fxml.FXML
     private TextField employeeidtf;
-    @FXML
+    @javafx.fxml.FXML
     private Label errormsglabel;
 
-    @FXML
+    @javafx.fxml.FXML
     public void initialize() {
         employeeidTVC.setCellValueFactory(new PropertyValueFactory<>("employeeId"));
         employeenameTVC.setCellValueFactory(new PropertyValueFactory<>("employeeName"));
@@ -45,14 +45,14 @@ class EmployeeAttendanceController {
         deptcb.getItems().addAll("HR", "Finance", "Legal", "Operations");
         statuscb.getItems().addAll("Present", "Absent", "Leave");
 
-        errormsglabel.setText("");
+        errormsglabel.setText("ERROR!");
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void backbuttonhandle(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void attendancebuttonhandle(ActionEvent actionEvent) {
         String employeeId = employeeidtf.getText();
         String employeeName = employeenametf.getText();
@@ -60,19 +60,19 @@ class EmployeeAttendanceController {
         String status = statuscb.getValue();
         LocalDate date = datedp.getValue();
 
-        if (employeeId == null || employeeId.isEmpty() ||
-                employeeName == null || employeeName.isEmpty() ||
-                department == null || department.isEmpty() ||
-                status == null || status.isEmpty() ||
-                date == null) {
 
+        if (employeeId.isEmpty() || employeeName.isEmpty() || department.isEmpty() || status.isEmpty() || date == null) {
             errormsglabel.setText("Please fill in all fields.");
             return;
+
         }
 
-        EmAttendanceModel attendance = new EmAttendanceModel(employeeId, employeeName, department, date, status);
-        attendanceTV.getItems().add(attendance);
+            EmAttendanceModel attendance = new EmAttendanceModel(employeeId, employeeName, department, date, status);
+            attendanceTV.getItems().add(attendance);
 
-        errormsglabel.setText("Attendance recorded successfully!");
-    }
+            String dateString = date.toString();
+
+        }
+
+
 }
