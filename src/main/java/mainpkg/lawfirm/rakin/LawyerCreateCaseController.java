@@ -63,10 +63,7 @@ public class LawyerCreateCaseController {
         arrayList.add(lawyer_case);
 
         outputTA.clear();
-        outputTA.setText(lawyer_case.toString() );
-        caseNameTF.clear();
-        clientNameTF.clear();
-        descriptionTA.clear();
+        outputTA.setText(lawyer_case.toString());
 
 
     }
